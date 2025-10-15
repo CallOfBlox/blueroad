@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Call of Blox - Roblox Game</title>
+  <style>
+    /* ===== Estilo base ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(120deg, #0a0a0a, #151515, #0f0f0f);
+      color: #fff;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ===== Fondo líquido ===== */
+    .bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 30% 30%, #ffb00033 0%, transparent 60%),
+                  radial-gradient(circle at 70% 70%, #00ffee22 0%, transparent 60%);
+      filter: blur(80px);
+      z-index: -1;
+    }
+
+    /* ===== Header ===== */
+    header {
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #ffb000, #00ffe5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    header p {
+      color: #ccc;
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
+
+    /* ===== Contenedor glass ===== */
+    .glass {
+      backdrop-filter: blur(15px) saturate(180%);
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 900px;
+      margin: 40px auto;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: #ffb000;
+      margin-bottom: 20px;
+      border-left: 4px solid #ffb000;
+      padding-left: 10px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .feature {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      padding: 20px;
+      transition: 0.3s;
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .feature h3 {
+      color: #00ffe5;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+
+    /* ===== FAQ ===== */
+    .faq-item {
+      margin-bottom: 20px;
+    }
+
+    .faq-item h4 {
+      color: #00ffe5;
+      margin-bottom: 5px;
+    }
+
+    .faq-item p {
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    /* ===== Registro ===== */
+    form {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    input[type="email"] {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    button {
+      background: linear-gradient(90deg, #ffb000, #00ffe5);
+      border: none;
+      border-radius: 8px;
+      padding: 12px 20px;
+      color: #000;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      color: #888;
+      font-size: 0.85rem;
+      padding: 40px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+
+  <header>
+    <h1>Blue Road</h1>
+    <p>Entrá al mundo o mirá desde el lobby.</p>
+  </header>
+
+  <section class="glass" id="caracteristicas">
+    <h2>Características</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>⚡ Gameplay fluido</h3>
+        <p>Ambiente tenso y divertido, animaciones suaves y una experiencia dinámica.</p>
+      </div>
+      <div class="feature">
+        <h3>🌙 Ciclo Día/Noche</h3>
+        <p>Permite crear los mejores paisajes de todos los juegos.</p>
+      </div>
+      <div class="feature">
+        <h3>🎨 Estilo visual único</h3>
+        <p>Graficos realistas, inspirado en juegos de bosques modernos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="glass" id="jugar">
+    <h2>Enlace al juego</h2>
+    <p>Podes jugar <b>Blue Road</b> Desde este link:</p>
+    <p><a href="https://www.roblox.com/es/games/138724619480671/Blue-Road" target="_blank" style="color:#00ffe5; text-decoration:underline;">👉 Ir al juego</a></p>
+  </section>
+
+ <section class="glass" id="registro">
+    <h2>Registro de actualizaciones</h2>
+    <p>1.0: Creacion del juego.</p>
+  </section>
+
+  <section class="glass" id="faq">
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq-item">
+      <h4>¿Corre en mi PC/telefono?</h4>
+      <p>Sí, es un juego un poco pesado pero generalmente va a 50-60 FPS. Recomendado: 6 GB RAM en móvil y GPU dedicada en PC.</p>
+    </div>
+    <div class="faq-item">
+      <h4>¿Se puede jugar offline?</h4>
+      <p>No, solo se puede jugar en linea con otros usuarios.</p>
+    </div>
+    <div class="faq-item">
+      <h4>¿Es pay-to-win?</h4>
+      <p>No, actualmente no hay ningun gamepass disponible, todo depende de caminar.</p>
+    </div>
+  </section>
+
+ 
+  <footer>
+    © 2025 Blue Road · Hecho con cariño por fans de los juegos. Todos los derechos reservados.
+  </footer>
+</body>
+</html>
